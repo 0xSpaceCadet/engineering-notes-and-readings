@@ -1,0 +1,154 @@
+------------------------------------------------------------------------------------------------
+Git Branching and everything	
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+from LearnGitBranching
+------------------------------------------------------------------------------------------------
+
+git commit
+
+like a snapshot at X time withd etails of all X - N times where N total commits have been done so far
+
+branching is essentially POINTERS to specific commits version 
+
+branch early and branch often
+
+
+git checkout or git switch to ENSURE that we move the right NODE 
+
+we can merge code -- conflict detection
+
+git commit
+git checkout [BRANCHNAME]
+then commit again 
+
+and current checkedout branch is X will be merged with brach Y by calling
+git merge Y (assuming X is already there)
+
+rebasing 
+
+allows the parallel to look like sequentially
+
+parallel C2 back to MAIN C3 
+
+git checkout to COMMIT / instead of BRANCH to change location of HEAD
+
+git reset COMMIT HASh
+
+GIT REVERT {branch name}
+
+Git branch - Branch1 Branch2 / Commit 
+
+Stages of a GIT repo
+
+modified, staged and committed
+
+
+.git repo -----checkout the project-----> working directory
+working directory ------stage fixes -----> staging area
+staging area ------ push commit ------> COMMITED back to git repo
+
+
+git staging area -- INDEX
+
+
+
+
+------------------------------------------------------------------------------------------------
+from ProGit book
+------------------------------------------------------------------------------------------------
+.git repo -----checkout the project-----> working directory
+working directory ------stage fixes -----> staging area
+staging area ------ push commit ------> COMMITED back to git repo
+
+
+git staging area -- INDEX
+
+git help <verbose>
+{v} meaning anything which is of significance
+
+cd to project i am doing C++ hpc basis Udacity
+
+and doing git init
+
+
+git status -s to see statuses
+git status ---> for detailed
+
+git add FILENAME 
+
+.gitifnore contains what not to BE TRACKED
+
+changes you have made but have not statged are in GIT DIFF
+git diff ....
+
+…or create a new repository on the command line
+echo "# openstreetmap-route-planner-io2d" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/0xSpaceCadet/openstreetmap-route-planner-io2d.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/0xSpaceCadet/openstreetmap-route-planner-io2d.git
+git branch -M main
+git push -u origin main
+
+  
+
+
+git rm
+git rm --cached FILENAME.EXTENSION
+
+// to unstage a staged file
+git reset HEAD FILENAME (CHANGEs but UNSTAGED for modificaitons)
+git restore --staged CONTRIBUTING.md
+
+git clone SOMEREMOTE
+
+git remote add pb https://github.com/paulboone/ticgi
+
+once a source is added 
+
+we can run git fetch ALIAS (pb) -- only what I DONT have at MOST up-to-date levels
+
+git fetch origin -- fetches up-to-date info from my parent ORIGIN branch
+
+git pull -- tries to merge on/off
+
+git clone --- essneitlally merges yes because you have nothing yet
+
+git show remote BRANCHNAME
+git push BRANCHAME FROM BRANCHNAME TO
+
+Branching in its purity can be described as 
+
+*ptrs to *ptrs
+
+```
+GIT POINTER (HEAD) points to Branch
+Branch POINTER (branchname based pointer) points to series of Commits
+Commit POINTER (commit hashed) points to series of project Trees
+Treest POINTER (tree hashsed) poitns to series of prject blobs
+```
+
+
+git branch basics I am cool
+git switch --crete BRANCHNAME
+git checkout BRANCHNAME
+
+you move the ptrs to ptrs
+
+
+git branch -d branchname
+git push -u origin MAIN --force 
+
+forces to be up-to-date
+
+
+git remote add origin -m 
+
