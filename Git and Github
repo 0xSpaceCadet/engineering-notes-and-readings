@@ -152,3 +152,6 @@ forces to be up-to-date
 
 git remote add origin -m 
 
+
+After git remote add origin also do the git pull REMOTE BRANCH bit 
+
